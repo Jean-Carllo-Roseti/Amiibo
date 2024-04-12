@@ -1,9 +1,11 @@
-import AmiiboList from './components/AmiiboList'
+import Home from './pages/home'
+import { GlobalCss } from './styles'
 
 function App() {
   return (
     <div className="App">
-      <AmiiboList />
+      <GlobalCss />
+      <Home />
     </div>
   )
 }
