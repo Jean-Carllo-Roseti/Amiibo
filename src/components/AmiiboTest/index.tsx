@@ -8,7 +8,7 @@ interface Amiibo {
   tail: string
 }
 
-const AmiiboList = () => {
+const AmiiboTest = () => {
   const [amiibos, setAmiibos] = useState<Amiibo[]>([]) // Use a interface aqui
 
   useEffect(() => {
@@ -42,4 +42,4 @@ const AmiiboList = () => {
   )
 }
 
-export default AmiiboList
+export default AmiiboTest

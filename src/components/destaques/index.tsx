@@ -1,4 +1,4 @@
-import Cards from '../../homeCards'
+import Cards from '../homeCards'
 import { DestaqueContent } from './style'
 
 const Destaque = () => {
