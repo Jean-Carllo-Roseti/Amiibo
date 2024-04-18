@@ -14,7 +14,6 @@ export type Amiibo = {
   }
   tail: string
   type: string
-  key: string
 }
 
 export type ApiAmiiboResponse = {

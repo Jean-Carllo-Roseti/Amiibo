@@ -12,8 +12,8 @@ const Vitrine = ({ amiibos }: Props) => {
       <ul>
         <h1>Amiibos</h1>
         {amiibos.map((amiibo) => (
-          <li key={amiibo.key}>
-            <Link to={`/amiibos/${encodeURIComponent(amiibo.key)}`}>
+          <li key={amiibo.tail}>
+            <Link to={`/amiibos/${encodeURIComponent(amiibo.tail)}`}>
               <img src={amiibo.image} alt={amiibo.name} />
               <h3>{amiibo.name}</h3>
               <p>Série: {amiibo.amiiboSeries}</p>
