@@ -1,3 +1,4 @@
+// src/types/Amiibos.ts
 export type Amiibo = {
   amiiboSeries: string
   character: string
@@ -16,4 +17,6 @@ export type Amiibo = {
   key: string
 }
 
-export type AmiiboList = Amiibo[]
+export type ApiAmiiboResponse = {
+  amiibo: Amiibo[]
+}
