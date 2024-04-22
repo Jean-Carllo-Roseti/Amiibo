@@ -1,6 +1,7 @@
 // src/components/Vitrine.tsx
 import { Link } from 'react-router-dom'
 import { Amiibo } from '../../types/Amiibos'
+import { VitrineSec, AmiiboItem, AmiiboList } from './style'
 
 type Props = {
   amiibos: Amiibo[]
@@ -8,20 +9,22 @@ type Props = {
 
 const Vitrine = ({ amiibos }: Props) => {
   return (
-    <section className="container">
-      <ul>
-        <h1>Amiibos</h1>
-        {amiibos.map((amiibo) => (
-          <li key={amiibo.tail}>
-            <Link to={`/amiibos/${encodeURIComponent(amiibo.tail)}`}>
-              <img src={amiibo.image} alt={amiibo.name} />
-              <h3>{amiibo.name}</h3>
-              <p>Série: {amiibo.amiiboSeries}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </section>
+    <div className="container">
+      <h2>Destaques</h2>
+      <VitrineSec>
+        <AmiiboList>
+          {amiibos.map((amiibo) => (
+            <AmiiboItem key={amiibo.tail}>
+              <Link to={`/amiibos/${amiibo.tail}`}>
+                <img src={amiibo.image} alt={amiibo.name} />
+                <h3>{amiibo.name}</h3>
+                <p>Série: {amiibo.amiiboSeries}</p>
+              </Link>
+            </AmiiboItem>
+          ))}
+        </AmiiboList>
+      </VitrineSec>
+    </div>
   )
 }
 
