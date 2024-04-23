@@ -1,3 +1,4 @@
+// src/services/api.js
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { Amiibo } from '../types/Amiibos'
 
@@ -7,15 +8,12 @@ const AmiiboApi = createApi({
     baseUrl: 'https://amiiboapi.com/api/'
   }),
   endpoints: (builder) => ({
-    getAmiibos: builder.query<Amiibo[], void>({
-      query: () => '/amiibo'
-    }),
     getAmiiboBySeries: builder.query<Amiibo[], string>({
-      query: (series) => `/amiibo/?amiiboSeries=${series}`
+      query: (series) => `amiibo/?amiiboSeries=${encodeURIComponent(series)}`
     })
   })
 })
 
-export const { useGetAmiibosQuery, useGetAmiiboBySeriesQuery } = AmiiboApi
+export const { useGetAmiiboBySeriesQuery } = AmiiboApi
 
 export default AmiiboApi

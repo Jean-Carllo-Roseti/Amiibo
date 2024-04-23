@@ -14,7 +14,7 @@ export const VitrineSec = styled.section`
 `
 
 export const AmiiboItem = styled.li`
-  width: 160px;
+  width: 185px;
   margin-right: 20px;
   background-color: white;
   border: 1px solid #ccc;
