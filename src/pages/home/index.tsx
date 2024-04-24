@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useGetAmiiboBySeriesQuery } from '../../services/api'
 import Destaque from '../../components/destaques'
 import Footer from '../../components/footer'
