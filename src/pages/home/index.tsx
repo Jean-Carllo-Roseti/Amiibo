@@ -7,6 +7,7 @@ import Header from '../../components/header'
 import Vitrine from '../../components/vitrine'
 import { shuffleArray } from '../../uteis'
 import { ApiAmiiboResponse } from '../../types/Amiibos'
+import Carrossel from '../../components/carrossel'
 
 const seriesOptions = [
   'Legend Of Zelda',
@@ -39,6 +40,7 @@ const Home = () => {
   return (
     <>
       <Header />
+      <Carrossel />
       <Destaque />
       <Vitrine amiibos={shuffledAmiibos} />
       <Footer />
