@@ -2,11 +2,12 @@ import styled from 'styled-components'
 
 export const HContent = styled.header`
   background-color: red;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 
   h1 {
     text-align: center;
     padding: 15px 0;
+    margin-bottom: 16px;
   }
 `
 export const HList = styled.ul`
@@ -14,6 +15,4 @@ export const HList = styled.ul`
   justify-content: space-between;
 `
 
-export const HItem = styled.ul`
-  margin: 16px 0;
-`
+export const HItem = styled.ul``

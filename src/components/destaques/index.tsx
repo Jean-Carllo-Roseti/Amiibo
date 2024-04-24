@@ -1,14 +1,17 @@
 import Cards from '../homeCards'
-import { DestaqueContent } from './style'
+import { DestaqueContent, Subtitulo } from './style'
 
 const Destaque = () => {
   return (
-    <DestaqueContent className="container">
-      <Cards />
-      <Cards />
-      <Cards />
-      <Cards />
-    </DestaqueContent>
+    <>
+      <Subtitulo>Destaques</Subtitulo>
+      <DestaqueContent className="container">
+        <Cards />
+        <Cards />
+        <Cards />
+        <Cards />
+      </DestaqueContent>
+    </>
   )
 }
 

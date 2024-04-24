@@ -10,42 +10,72 @@ import SuperSmash from '../../assets/image/Super Smash Bros.avif'
 import Yoshy from '../../assets/image/Yoshy.jpg'
 import Pokemon from '../../assets/image/pokemon.jpg'
 
+import { ImageCar } from './styel'
+
 const Carrossel = () => {
   return (
     <Carousel interval={3000} fade>
       <Carousel.Item>
-        <img
-          className="d-block w-100"
+        <ImageCar
+          className="limite d-block w-100 "
           src={SuperSmash}
           alt="Super Smash Bros"
         />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Mario} alt="Super Mario" />
+        <ImageCar
+          className="limite d-block w-100  "
+          src={Mario}
+          alt="Super Mario"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Metroid} alt="Metroid" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={Metroid}
+          alt="Metroid"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Yoshy} alt="Yoshi" />
+        <ImageCar className="limite d-block w-100 " src={Yoshy} alt="Yoshi" />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Kirby} alt="Kirby" />
+        <ImageCar className="limite d-block w-100 " src={Kirby} alt="Kirby" />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Pokemon} alt="Pokemon" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={Pokemon}
+          alt="Pokemon"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Zelda} alt="The Legend of Zelda" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={Zelda}
+          alt="The Legend of Zelda"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={FireEmblem} alt="Fire Emblem" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={FireEmblem}
+          alt="Fire Emblem"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Splatton} alt="Splatoon" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={Splatton}
+          alt="Splatoon"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <img className="d-block w-100" src={Animal} alt="Animal Crossing" />
+        <ImageCar
+          className="limite d-block w-100 "
+          src={Animal}
+          alt="Animal Crossing"
+        />
       </Carousel.Item>
     </Carousel>
   )
