@@ -9,7 +9,6 @@ const Destaque = () => {
         <Cards />
         <Cards />
         <Cards />
-        <Cards />
       </DestaqueContent>
     </>
   )

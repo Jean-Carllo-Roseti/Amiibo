@@ -7,6 +7,7 @@ export const AmiiboList = styled.ul`
 `
 
 export const VitrineSec = styled.section`
+  margin-top: 32px;
   display: flex;
   overflow-x: auto;
   padding: 10px;

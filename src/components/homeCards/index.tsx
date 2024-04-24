@@ -1,4 +1,4 @@
-import { CardBody } from './style'
+import { CardBody, Botao } from './style'
 
 // type Props = {
 //   title: string
@@ -8,10 +8,10 @@ import { CardBody } from './style'
 const Cards = () => {
   return (
     <CardBody>
-      <h3>Titulo Personagem</h3>
-      <img src="https://placeholder.com/200x200" alt="" />
+      <h3> Personagem</h3>
+      <img src="https://placeholder.com/288x330" alt="" />
       <div>
-        <a href="">Saiba Mais</a>
+        <Botao>Saiba Mais</Botao>
       </div>
     </CardBody>
   )
