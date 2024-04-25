@@ -5,7 +5,7 @@ export const DestaqueContent = styled.section`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
-  padding: 0; // Remove padding lateral
+  padding: 10px 0;
 
   :nth-child(2) {
     margin-left: 0;

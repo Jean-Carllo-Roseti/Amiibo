@@ -1,3 +1,4 @@
+import { AmiiboItem } from '../vitrine/style'
 import { CardBody, Botao } from './style'
 
 type Props = {
@@ -8,11 +9,13 @@ type Props = {
 const Cards = ({ name, image }: Props) => {
   return (
     <CardBody>
-      <h3>{name}</h3>
-      <img src={image} alt="foto do personagem `${name}`" />
-      <div>
-        <Botao>Saiba Mais</Botao>
-      </div>
+      <AmiiboItem>
+        <h3>{name}</h3>
+        <img src={image} alt="foto do personagem `${name}`" />
+        <div>
+          <Botao>Saiba Mais</Botao>
+        </div>
+      </AmiiboItem>
     </CardBody>
   )
 }

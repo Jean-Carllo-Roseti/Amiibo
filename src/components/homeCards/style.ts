@@ -1,9 +1,11 @@
 import styled from 'styled-components'
+import { AmiiboItem } from '../vitrine/style'
 
 export const CardBody = styled.div`
-  background-color: #fff;
-  padding: 0 16px;
-  margin: 16px;
+  ${AmiiboItem} {
+    width: 304px;
+    margin: 0;
+  }
 
   img {
     width: 283px;
