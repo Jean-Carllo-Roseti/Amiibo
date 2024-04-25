@@ -3,10 +3,11 @@ import styled from 'styled-components'
 export const CardBody = styled.div`
   background-color: #fff;
   padding: 0 16px;
-  margin-right: 16px;
-  border-radius: 16px;
+  margin: 16px;
 
   img {
+    width: 283px;
+    height: 390px;
     border-radius: 16px;
   }
 

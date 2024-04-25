@@ -1,15 +1,15 @@
 import { CardBody, Botao } from './style'
 
-// type Props = {
-//   title: string
-//   image: string
-// }
+type Props = {
+  name: string
+  image: string
+}
 
-const Cards = () => {
+const Cards = ({ name, image }: Props) => {
   return (
     <CardBody>
-      <h3> Personagem</h3>
-      <img src="https://placeholder.com/288x330" alt="" />
+      <h3>{name}</h3>
+      <img src={image} alt="foto do personagem `${name}`" />
       <div>
         <Botao>Saiba Mais</Botao>
       </div>
