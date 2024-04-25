@@ -1,3 +1,6 @@
+import { useSpring, animated } from 'react-spring'
+import { ContentCardSeries } from './style'
+
 import Zelda from '../../assets/image/Zelda.jpg'
 import Pokemon from '../../assets/image/pokemon.jpg'
 import Mario from '../../assets/image/super-mario-bros-movie.webp'
@@ -7,8 +10,6 @@ import Splatoon from '../../assets/image/Splatoon.avif'
 import Metroid from '../../assets/image/Metroid.avif'
 import FireEmblend from '../../assets/image/fireEmblem.avif'
 import MonsterHunter from '../../assets/image/Yoshy.jpg'
-
-import { ContentCardSeries } from './style'
 
 const seriesImages: { [key: string]: string } = {
   'Super Mario': Mario,
@@ -26,17 +27,26 @@ type Props = {
   name: string
 }
 
+const AnimatedSeriesCard = animated(ContentCardSeries) // Aplica animação ao componente estilizado
+
 const SeriesCard = ({ name }: Props) => {
   const imageUrl = seriesImages[name]
+  // Animação de fade-in ao renderizar
+  const fadeProps = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: 1 },
+    config: { duration: 4000 } // Configura a duração da animação para 1000ms (1 segundo)
+  })
 
   return (
-    <ContentCardSeries
+    <AnimatedSeriesCard
       style={{
+        ...fadeProps,
         backgroundImage: `url(${imageUrl})`
       }}
     >
-      <h3>{name}</h3>
-    </ContentCardSeries>
+      <h3 className="ms-5">{name}</h3>
+    </AnimatedSeriesCard>
   )
 }
 
