@@ -7,7 +7,6 @@ export const AmiiboList = styled.ul`
 `
 
 export const VitrineSec = styled.section`
-  margin-top: 32px;
   display: flex;
   overflow-x: auto;
   padding: 10px;
@@ -63,7 +62,6 @@ export const ScrollButton = styled.button`
 export const VitrineGeral = styled.div`
   display: flex;
   position: relative;
-  margin-top: 36px;
 `
 export const VitrineButton = styled.button`
   position: absolute;

@@ -59,26 +59,29 @@ const Vitrine = () => {
   ).slice(0, 15)
 
   return (
-    <VitrineGeral className="container">
-      <LeftButton className="left-button" onClick={scrollLeft}>
-        {'<'}
-      </LeftButton>
-      <VitrineSec ref={scrollContainer}>
-        <AmiiboList>
-          {amiibos.map((amiibo) => (
-            <AmiiboItem key={amiibo.tail}>
-              <Link to={`/amiibos/${amiibo.tail}`}>
-                <img src={amiibo.image} alt={amiibo.name} />
-                <h3>{amiibo.name}</h3>
-              </Link>
-            </AmiiboItem>
-          ))}
-        </AmiiboList>
-      </VitrineSec>
-      <RightButton className="right-button" onClick={scrollRight}>
-        {'>'}
-      </RightButton>
-    </VitrineGeral>
+    <>
+      <h2 className="text-center mt-5 mb-5">Confira Mais</h2>
+      <VitrineGeral className="container">
+        <LeftButton className="left-button" onClick={scrollLeft}>
+          {'<'}
+        </LeftButton>
+        <VitrineSec ref={scrollContainer}>
+          <AmiiboList>
+            {amiibos.map((amiibo) => (
+              <AmiiboItem key={amiibo.tail}>
+                <Link to={`/amiibos/${amiibo.tail}`}>
+                  <img src={amiibo.image} alt={amiibo.name} />
+                  <h3>{amiibo.name}</h3>
+                </Link>
+              </AmiiboItem>
+            ))}
+          </AmiiboList>
+        </VitrineSec>
+        <RightButton className="right-button" onClick={scrollRight}>
+          {'>'}
+        </RightButton>
+      </VitrineGeral>
+    </>
   )
 }
 

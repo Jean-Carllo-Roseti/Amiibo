@@ -17,7 +17,3 @@ export const DestaqueContent = styled.section`
     margin-bottom: 24px;
   }
 `
-
-export const Subtitulo = styled.h2`
-  text-align: center;
-`
