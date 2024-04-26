@@ -14,7 +14,7 @@ const Header = () => {
             <h3>Séries</h3>
           </Link>
           <h3>Personagem</h3>
-          <Link to={'/tipe'}>
+          <Link to={'/type'}>
             <h3>Tipo</h3>
           </Link>
         </HList>

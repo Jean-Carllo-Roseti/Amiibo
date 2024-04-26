@@ -1,13 +1,12 @@
 import Footer from '../../components/footer'
 import Header from '../../components/header'
+import TypeList from '../../components/typeList'
 
 const Tipos = () => {
   return (
     <>
       <Header />
-      <div>
-        <h3>asduhasud</h3>
-      </div>
+      <TypeList />
       <Footer />
     </>
   )
