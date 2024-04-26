@@ -12,7 +12,7 @@ const seriesObj = {
   '0x05c': 'Metroid'
 }
 
-const SeriesPage = () => {
+const SeriesList = () => {
   return (
     <>
       <h3 className="text-center m-5">Series</h3>
@@ -25,4 +25,4 @@ const SeriesPage = () => {
   )
 }
 
-export default SeriesPage
+export default SeriesList

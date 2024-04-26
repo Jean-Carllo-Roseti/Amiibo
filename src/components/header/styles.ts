@@ -14,5 +14,3 @@ export const HList = styled.ul`
   display: flex;
   justify-content: space-between;
 `
-
-export const HItem = styled.ul``

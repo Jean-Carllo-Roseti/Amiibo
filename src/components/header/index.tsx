@@ -1,4 +1,5 @@
-import { HContent, HList, HItem } from './styles'
+import { Link } from 'react-router-dom'
+import { HContent, HList } from './styles'
 
 const Header = () => {
   return (
@@ -6,10 +7,16 @@ const Header = () => {
       <div className="container">
         <h1>Biblioteca Amiibo</h1>
         <HList>
-          <HItem>home</HItem>
-          <HItem>serie</HItem>
-          <HItem>personagem</HItem>
-          <HItem>tipo</HItem>
+          <Link to={'/'}>
+            <h3>Home</h3>
+          </Link>
+          <Link to={'/gameseries'}>
+            <h3>Séries</h3>
+          </Link>
+          <h3>Personagem</h3>
+          <Link to={'/tipe'}>
+            <h3>Tipo</h3>
+          </Link>
         </HList>
       </div>
     </HContent>

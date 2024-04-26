@@ -35,7 +35,7 @@ const SeriesCard = ({ name }: Props) => {
   const fadeProps = useSpring({
     from: { opacity: 0 },
     to: { opacity: 1 },
-    config: { duration: 4000 } // Configura a duração da animação para 1000ms (1 segundo)
+    config: { duration: 1000 } // Configura a duração da animação para 1000ms (1 segundo)
   })
 
   return (

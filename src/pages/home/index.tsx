@@ -1,9 +1,9 @@
 // src/pages/Home.tsx
+import AmiiboGrid from '../../components/amiibosGrid'
 import Carrossel from '../../components/carrossel'
 import Destaque from '../../components/destaques'
 import Footer from '../../components/footer'
 import Header from '../../components/header'
-import SeriesPage from '../../components/series'
 import Vitrine from '../../components/vitrine'
 
 const Home = () => {
@@ -14,7 +14,7 @@ const Home = () => {
       <Destaque />
       <Vitrine />
       <Footer />
-      <SeriesPage />
+      <AmiiboGrid />
     </>
   )
 }

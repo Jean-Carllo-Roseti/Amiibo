@@ -39,6 +39,7 @@ export const AmiiboItem = styled.li`
   h3 {
     font-size: 16px;
     color: #333;
+    text-decorate: none;
   }
 
   p {
@@ -46,19 +47,7 @@ export const AmiiboItem = styled.li`
     color: #666;
   }
 `
-export const ScrollButton = styled.button`
-  background-color: #f4f4f4;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  border-radius: 50%;
-  margin: 0 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-  &:hover {
-    background-color: #e2e2e2;
-  }
-`
 export const VitrineGeral = styled.div`
   display: flex;
   position: relative;

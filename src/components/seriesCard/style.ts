@@ -8,7 +8,6 @@ const fadeIn = keyframes`
     opacity: 1;
   }
 `
-
 export const ContentCardSeries = styled.div`
   height: 208px;
   margin-bottom: 20px;
@@ -17,8 +16,12 @@ export const ContentCardSeries = styled.div`
   background-size: cover;
   animation: ${fadeIn} 1s ease-out;
   cursor: pointer;
+  box-shadow: 18px -17px 5px 1px rgba(0, 0, 0, 0.1);
   &:hover {
+    box-shadow: 18px -17px 5px 1px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
-    transition: transform 0.25s ease;
+    transition:
+      box-shadow 0.7s ease,
+      transform 0.7s ease;
   }
 `
