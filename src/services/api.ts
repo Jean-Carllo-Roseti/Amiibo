@@ -18,7 +18,8 @@ const AmiiboApi = createApi({
       query: ({ head, tail }) => `amiibo/?head=${head}&tail=${tail}`
     }),
     getAmiibos: builder.query({
-      query: (page) => `amiibo/?page=${page}`
+      query: () => `amiibo/`,
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
     })
   })
 })
