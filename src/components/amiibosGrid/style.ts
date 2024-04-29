@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { AmiiboItem } from '../vitrine/style'
 
-export const ContaienrAmiioG = styled.ul`
+export const ContaienrAmiiboG = styled.ul`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
@@ -16,3 +16,4 @@ export const ContaienrAmiioG = styled.ul`
     }
   }
 `
+export { AmiiboItem }

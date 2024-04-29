@@ -16,11 +16,17 @@ const AmiiboApi = createApi({
       { head: string; tail: string }
     >({
       query: ({ head, tail }) => `amiibo/?head=${head}&tail=${tail}`
+    }),
+    getAmiibos: builder.query({
+      query: (page) => `amiibo/?page=${page}`
     })
   })
 })
 
-export const { useGetAmiiboBySeriesQuery, useGetAmiiboByHeadAndTailQuery } =
-  AmiiboApi
+export const {
+  useGetAmiiboBySeriesQuery,
+  useGetAmiiboByHeadAndTailQuery,
+  useGetAmiibosQuery
+} = AmiiboApi
 
 export default AmiiboApi

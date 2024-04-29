@@ -1,16 +1,16 @@
 import { AmiiboItem } from '../vitrine/style'
-import { ContaienrAmiioG } from './style'
+import { ContaienrAmiiboG } from './style'
 
 const AmiiboGrid = () => {
   return (
     <>
       <h3 className="text-center m-5">Titulo</h3>
-      <ContaienrAmiioG className="container ">
+      <ContaienrAmiiboG className="container ">
         <AmiiboItem className="mb-5">
           <h4 className="text-center">nome</h4>
           <img src="https://placeholder.com/300x300" alt="" />
         </AmiiboItem>
-      </ContaienrAmiioG>
+      </ContaienrAmiiboG>
     </>
   )
 }
