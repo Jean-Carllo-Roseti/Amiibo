@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-import AmiiboGrid from '../../components/amiibosGrid'
+
 import Carrossel from '../../components/carrossel'
 import Destaque from '../../components/destaques'
 import Footer from '../../components/footer'
@@ -14,7 +14,6 @@ const Home = () => {
       <Destaque />
       <Vitrine />
       <Footer />
-      <AmiiboGrid />
     </>
   )
 }

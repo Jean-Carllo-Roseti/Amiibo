@@ -1,3 +1,15 @@
+import AmiiboGrid from '../../components/amiibosGrid'
+import Footer from '../../components/footer'
+import Header from '../../components/header'
+
 const Personagens = () => {
-  return <div>asdasd</div>
+  return (
+    <>
+      <Header />
+      <AmiiboGrid />
+      <Footer />
+    </>
+  )
 }
+
+export default Personagens
