@@ -20,11 +20,21 @@ const AmiiboApi = createApi({
     getAmiibos: builder.query({
       query: () => `amiibo/`,
       transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
+    }),
+    getAmiibosByGames: builder.query({
+      query: (gameSeriesKey) =>
+        `amiibo/?gameseries=${encodeURIComponent(gameSeriesKey)}`,
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
+    }),
+    getAmiibosByTyoe: builder.query({
+      query: (typesKey) => `amiibo/?gameseries=${encodeURIComponent(typesKey)}`,
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
     })
   })
 })
 
 export const {
+  useGetAmiibosByGamesQuery,
   useGetAmiiboBySeriesQuery,
   useGetAmiiboByHeadAndTailQuery,
   useGetAmiibosQuery

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SeriesCard from '../seriesCard'
 
 const seriesObj = {
@@ -18,7 +19,9 @@ const SeriesList = () => {
       <h3 className="text-center m-5">Series</h3>
       <div className="container">
         {Object.entries(seriesObj).map(([key, name]) => (
-          <SeriesCard key={key} name={name} />
+          <Link to={`/game-series/${encodeURIComponent(key)}`} key={key}>
+            <SeriesCard name={name} />
+          </Link>
         ))}
       </div>
     </>

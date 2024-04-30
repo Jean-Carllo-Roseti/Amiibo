@@ -13,13 +13,23 @@ export interface AmiiboState {
   amiibos: AmiiboType[]
   page: number
   error: string | null
+  filters: {
+    series: string
+    type: string
+    name: string
+  }
 }
 
 const initialState: AmiiboState = {
   loading: false,
   amiibos: [],
   page: 0,
-  error: null
+  error: null,
+  filters: {
+    series: '',
+    type: '',
+    name: ''
+  }
 }
 
 const AmiiboSlice = createSlice({
@@ -28,21 +38,40 @@ const AmiiboSlice = createSlice({
   reducers: {
     startLoading(state) {
       state.loading = true
+      state.error = null
     },
     amiibosLoaded(state, action: PayloadAction<AmiiboType[]>) {
-      state.amiibos = [...state.amiibos, ...action.payload]
+      state.amiibos = action.payload
       state.loading = false
+    },
+    amiibosLoadFailure(state, action: PayloadAction<string>) {
+      state.error = action.payload
+      state.loading = false
+    },
+    setPage(state, action: PayloadAction<number>) {
+      state.page = action.payload
     },
     incrementPage(state) {
       state.page += 1
     },
-    setError(state, action: PayloadAction<string>) {
-      state.error = action.payload
-      state.loading = false
+    setFilter(
+      state,
+      action: PayloadAction<{
+        field: keyof AmiiboState['filters']
+        value: string
+      }>
+    ) {
+      state.filters[action.payload.field] = action.payload.value
     }
   }
 })
 
-export const { startLoading, amiibosLoaded, incrementPage, setError } =
-  AmiiboSlice.actions
+export const {
+  startLoading,
+  amiibosLoaded,
+  amiibosLoadFailure,
+  setPage,
+  incrementPage,
+  setFilter
+} = AmiiboSlice.actions
 export default AmiiboSlice.reducer

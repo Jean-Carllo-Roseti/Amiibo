@@ -13,4 +13,4 @@ export const store = configureStore({
     buildGetDefaultMiddleware().concat(AmiiboApi.middleware)
 })
 
-export type RootReducer = ReturnType<typeof store.getState>
+export type RootState = ReturnType<typeof store.getState>
