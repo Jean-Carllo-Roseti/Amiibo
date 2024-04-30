@@ -8,7 +8,7 @@ export const ContainerAmiiboG = styled.ul`
   ${AmiiboItem} {
     width: 234px;
     height: 348px;
-
+    margin-bottom: 48px;
     img {
       border-radius: 8px;
       width: 214px;

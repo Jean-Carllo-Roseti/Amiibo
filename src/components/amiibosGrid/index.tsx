@@ -37,7 +37,7 @@ const AmiibosGrid = () => {
   }, [handleScroll]) // handleScroll agora é uma dependência
 
   return (
-    <ContaienrAmiiboG>
+    <ContaienrAmiiboG className="container">
       {displayedAmiibos.map((amiibo, index) => (
         <AmiiboItem key={index}>
           <p>{amiibo.name}</p>

@@ -3,6 +3,8 @@ import { useState, useEffect, useCallback } from 'react'
 import { useGetAmiibosByGamesQuery } from '../../services/api'
 import { Amiibo } from '../../types/Amiibos' // Certifique-se de que este caminho esteja correto
 import { ContainerAmiiboG, AmiiboItem } from './style'
+import Header from '../header'
+import Footer from '../footer'
 
 const RenderAmiiboSeries = () => {
   const [page, setPage] = useState(0)
@@ -40,8 +42,9 @@ const RenderAmiiboSeries = () => {
 
   return (
     <>
-      <h3>testando spersonagem</h3>
-      <ContainerAmiiboG>
+      <Header />
+      <h3 className="text-center m-5"> Personagens </h3>
+      <ContainerAmiiboG className="container">
         {displayedAmiibos.map((amiibo, index) => (
           <AmiiboItem key={index}>
             <p>{amiibo.name}</p>
@@ -50,6 +53,7 @@ const RenderAmiiboSeries = () => {
         ))}
         {isFetching && <p>Loading...</p>}
       </ContainerAmiiboG>
+      <Footer />
     </>
   )
 }

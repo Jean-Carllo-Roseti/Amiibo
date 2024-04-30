@@ -5,11 +5,10 @@ const Header = () => {
   return (
     <HContent>
       <div className="container">
-        <h1>Biblioteca Amiibo</h1>
+        <Link to={'/'}>
+          <h1>Biblioteca Amiibo</h1>
+        </Link>
         <HList>
-          <Link to={'/'}>
-            <h3>Home</h3>
-          </Link>
           <Link to={'/gameseries'}>
             <h3>Séries</h3>
           </Link>
