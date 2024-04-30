@@ -26,14 +26,15 @@ const AmiiboApi = createApi({
         `amiibo/?gameseries=${encodeURIComponent(gameSeriesKey)}`,
       transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
     }),
-    getAmiibosByTyoe: builder.query({
-      query: (typesKey) => `amiibo/?gameseries=${encodeURIComponent(typesKey)}`,
-      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
+    getAmiibosByType: builder.query({
+      query: (typesKey) => `amiibo/?type=${encodeURIComponent(typesKey)}`,
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Isso assume que a API retorna um objeto com uma propriedade 'amiibo' contendo o array dos dados
     })
   })
 })
 
 export const {
+  useGetAmiibosByTypeQuery,
   useGetAmiibosByGamesQuery,
   useGetAmiiboBySeriesQuery,
   useGetAmiiboByHeadAndTailQuery,
