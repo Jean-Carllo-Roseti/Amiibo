@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import { useGetAmiibosByTypeQuery } from '../../services/api'
 import { Amiibo } from '../../types/Amiibos' // Certifique-se de que este caminho esteja correto
-import { ContainerAmiiboG, AmiiboItem } from '../renderPersonagens/style'
+import { ContainerAmiiboG, AmiiboItem } from '../renderAmiiboSeries/style'
 
 const RenderType = () => {
   const [page, setPage] = useState(0)

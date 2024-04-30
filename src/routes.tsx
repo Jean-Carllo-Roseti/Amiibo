@@ -4,7 +4,6 @@ import Series from './pages/series'
 import Tipos from './pages/tipos'
 import Personagens from './pages/personagens'
 import RenderAmiiboSeries from './components/renderAmiiboSeries'
-import TypeList from './components/typeList'
 import RenderType from './components/renderType'
 
 const Rotas = () => {

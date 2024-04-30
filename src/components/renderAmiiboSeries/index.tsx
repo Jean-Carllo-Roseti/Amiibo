@@ -2,9 +2,9 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import { useGetAmiibosByGamesQuery } from '../../services/api'
 import { Amiibo } from '../../types/Amiibos' // Certifique-se de que este caminho esteja correto
-import { ContainerAmiiboG, AmiiboItem } from '../renderPersonagens/style'
+import { ContainerAmiiboG, AmiiboItem } from './style'
 
-const RenderPersonagens = () => {
+const RenderAmiiboSeries = () => {
   const [page, setPage] = useState(0)
   const itemsPerPage = 20
   const [displayedAmiibos, setDisplayedAmiibos] = useState<Amiibo[]>([])
@@ -54,4 +54,4 @@ const RenderPersonagens = () => {
   )
 }
 
-export default RenderPersonagens
+export default RenderAmiiboSeries
