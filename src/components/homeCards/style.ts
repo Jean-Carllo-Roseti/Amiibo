@@ -37,3 +37,54 @@ export const Botao = styled.button`
     background-color: rgba(255, 0, 0, 0.5); // Cor vermelha com 50% de opacidade
   }
 `
+export const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.visible {
+    display: flex;
+  }
+
+  .overlay {
+    position: absolute;
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.5;
+    content: '';
+  }
+`
+export const ConteudoOver = styled.div`
+  background-color: white;
+  width: 1020px;
+  padding: 38px;
+  display: flex;
+  z-index: 4;
+  img {
+    margin-right: 42px;
+    height: 700px;
+    width: 400px;
+  }
+`
+
+export const OverlayContainer = styled.div`
+  z-index: 5;
+`
+export const ImageEspaco = styled.div``
+
+export const OutraCoisa = styled.ul`
+  padding: 50px 80px;
+  width: 600px;
+  // text-align: center;
+  background-color: #f1f1f1f1;
+`
+export const showOverlay = styled.div``

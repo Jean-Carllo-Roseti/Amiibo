@@ -16,11 +16,10 @@ import { shuffleArray } from '../../uteis'
 const Vitrine = () => {
   const seriesOptions = [
     'Legend Of Zelda',
-    'Super Smash Bros.',
     'Animal Crossing',
     'Mario Sports Superstars',
     'Splatoon',
-    "Yoshi's Woolly World"
+    'Shovel Knight'
   ]
 
   const scrollContainer = useRef<HTMLDivElement>(null)
@@ -70,8 +69,8 @@ const Vitrine = () => {
             {amiibos.map((amiibo) => (
               <AmiiboItem key={amiibo.tail}>
                 <Link
-                  to={`/game-series/${encodeURIComponent(amiibo.key)}`}
-                  key={amiibo.key}
+                  to={`/game-series/${encodeURIComponent(amiibo.amiiboSeries)}`}
+                  key={amiibo.amiiboSeries}
                 >
                   <h3 className="text-center">{amiibo.name}</h3>
                   <img src={amiibo.image} alt={amiibo.name} />

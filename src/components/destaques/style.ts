@@ -17,3 +17,4 @@ export const DestaqueContent = styled.section`
     margin-bottom: 24px;
   }
 `
+export const Modal = styled.div``
