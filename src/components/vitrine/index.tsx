@@ -69,7 +69,10 @@ const Vitrine = () => {
           <AmiiboList>
             {amiibos.map((amiibo) => (
               <AmiiboItem key={amiibo.tail}>
-                <Link to={`/amiibos/${amiibo.tail}`}>
+                <Link
+                  to={`/game-series/${encodeURIComponent(amiibo.key)}`}
+                  key={amiibo.key}
+                >
                   <h3 className="text-center">{amiibo.name}</h3>
                   <img src={amiibo.image} alt={amiibo.name} />
                 </Link>

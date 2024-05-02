@@ -1,20 +1,38 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import { useGetAmiibosByGamesQuery } from '../../services/api'
-import { Amiibo } from '../../types/Amiibos' // Certifique-se de que este caminho esteja correto
+import { Amiibo } from '../../types/Amiibos'
 import { ContainerAmiiboG, AmiiboItem } from './style'
 import Header from '../header'
 import Footer from '../footer'
+
+const seriesNames: { [key: string]: string } = {
+  '0x000': 'Super Mario',
+  '0x010': 'The Lengend of Zelda',
+  '0x018': 'Animal Crossing',
+  '0x210': 'Fire Emblem',
+  '0x350': 'Monster Hunter',
+  '0x080': 'Splatoon',
+  '0x05c': 'Metroid'
+}
 
 const RenderAmiiboSeries = () => {
   const [page, setPage] = useState(0)
   const itemsPerPage = 20
   const [displayedAmiibos, setDisplayedAmiibos] = useState<Amiibo[]>([])
-
-  const { seriesKey } = useParams()
-  const { data: amiibos, isFetching } = useGetAmiibosByGamesQuery(seriesKey)
+  const { seriesKey } = useParams<{ seriesKey: string }>()
 
   // Assume undefined se não houver parâmetros necessários
+  const { data: amiibos, isFetching } = useGetAmiibosByGamesQuery(seriesKey)
+
+  // Função para obter o nome da série de jogos
+  const getSeriesName = (key: string) => {
+    if (key in seriesNames) {
+      return seriesNames[key]
+    } else {
+      return key // Retorna a própria chave se não for encontrada no objeto seriesNames
+    }
+  }
 
   // Manage displayed amiibos based on pagination
   useEffect(() => {
@@ -40,10 +58,18 @@ const RenderAmiiboSeries = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [handleScroll]) // handleScroll agora é uma dependência
 
+  useEffect(() => {
+    if (seriesKey) {
+      document.title = `Amiibos do tipo ${getSeriesName(seriesKey)}`
+    }
+  }, [seriesKey])
+
   return (
     <>
       <Header />
-      <h3 className="text-center m-5"> Personagens </h3>
+      <h3 className="text-center m-5">
+        {seriesKey ? getSeriesName(seriesKey) : ''}
+      </h3>
       <ContainerAmiiboG className="container">
         {displayedAmiibos.map((amiibo, index) => (
           <AmiiboItem key={index}>

@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { useState, useEffect, useCallback } from 'react'
 import { useGetAmiibosByTypeQuery } from '../../services/api'
-import { Amiibo } from '../../types/Amiibos' // Certifique-se de que este caminho esteja correto
+import { Amiibo } from '../../types/Amiibos'
 import { ContainerAmiiboG, AmiiboItem } from '../renderAmiiboSeries/style'
 import Header from '../header'
 import Footer from '../footer'
@@ -10,16 +10,12 @@ const RenderType = () => {
   const [page, setPage] = useState(0)
   const itemsPerPage = 20
   const [displayedAmiibos, setDisplayedAmiibos] = useState<Amiibo[]>([])
+  const { typeKey } = useParams() // Obtém o parâmetro de URL "typeKey"
 
-  const { typeKey } = useParams()
   const { data: amiibos, isFetching } = useGetAmiibosByTypeQuery(typeKey)
 
-  // Assume undefined se não houver parâmetros necessários
-
-  // Manage displayed amiibos based on pagination
   useEffect(() => {
     if (amiibos) {
-      console.log('total amiibos fetch:', amiibos.length)
       setDisplayedAmiibos(amiibos.slice(0, (page + 1) * itemsPerPage))
     }
   }, [amiibos, page])
@@ -31,19 +27,24 @@ const RenderType = () => {
       amiibos &&
       displayedAmiibos.length < amiibos.length
     ) {
-      setPage((prev) => prev + 1) // Load next "page" of amiibos
+      setPage((prev) => prev + 1)
     }
-  }, [amiibos, displayedAmiibos.length, page]) // Assegure-se de que todas as dependências externas estão listadas aqui
+  }, [amiibos, displayedAmiibos.length, page])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [handleScroll]) // handleScroll agora é uma dependência
+  }, [handleScroll])
+
+  // Atualiza dinamicamente o título com base no tipo de amiibos selecionados
+  useEffect(() => {
+    document.title = `${typeKey}` // Define o título da página
+  }, [typeKey])
 
   return (
     <>
       <Header />
-      <h3 className="text-center m-5">TIPOS</h3>
+      <h3 className="text-center m-5"> {typeKey}</h3> {/* Título dinâmico */}
       <ContainerAmiiboG className="container">
         {displayedAmiibos.map((amiibo, index) => (
           <AmiiboItem key={index}>
