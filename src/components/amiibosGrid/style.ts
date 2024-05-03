@@ -17,3 +17,18 @@ export const ContaienrAmiiboG = styled.ul`
   }
 `
 export { AmiiboItem }
+
+export const GridTotal = styled.div`
+  background-color: #f1f1f1;
+`
+export const ButtonLupa = styled.button`
+  border: none;
+
+  img {
+    width: 30px;
+    margin-right: 16px;
+  }
+`
+export const CabecalhoPerson = styled.div`
+  align-items: center;
+`

@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { HContent, HList } from './styles'
+import IconMario from '../../assets/image/iconMario.png'
 
 const Header = () => {
   return (
@@ -7,17 +8,23 @@ const Header = () => {
       <div className="container">
         <HList>
           <Link to={'/'}>
-            <h2 className="ml-5">Home</h2>
+            <img className="mario" src={IconMario} alt="Imagem do Mario" />
           </Link>
-          <Link to={'/gameseries'}>
-            <h2>Séries</h2>
-          </Link>
-          <Link to={'/page'}>
-            <h2>Personagem</h2>
-          </Link>
-          <Link to={'/type'}>
-            <h2>Tipo</h2>
-          </Link>
+          <li>
+            <Link className="link" to={'/gameseries'}>
+              <h2>Séries</h2>
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={'/page'}>
+              <h2>Personagens</h2>
+            </Link>
+          </li>
+          <li>
+            <Link className="link" to={'/type'}>
+              <h2>Tipos</h2>
+            </Link>
+          </li>
         </HList>
       </div>
     </HContent>

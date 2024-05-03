@@ -1,8 +1,10 @@
 import styled from 'styled-components'
+import { cores } from '../../styles'
 
 export const Fcontent = styled.footer`
-  background-color: blue;
+  background-color: ${cores.vermelhoHeader};
   margin-top: 24px;
+  color: #fff;
 
   h1 {
     text-align: center;
@@ -13,8 +15,4 @@ export const Fcontent = styled.footer`
     padding: 15px;
     text-align: center;
   }
-`
-export const FList = styled.ul`
-  display: flex;
-  justify-content: space-between;
 `

@@ -1,9 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import { useGetAmiibosQuery } from '../../services/api'
 import { Amiibo } from '../../types/Amiibos'
-import { ContaienrAmiiboG, AmiiboItem } from './style'
+import {
+  ContaienrAmiiboG,
+  AmiiboItem,
+  GridTotal,
+  ButtonLupa,
+  CabecalhoPerson
+} from './style'
 import { searchAmiibos } from '../../store/reducer/amiibo'
+import lupa from '../../assets/image/lupa.png'
 
 const AmiibosGrid = () => {
   const dispatch = useDispatch()
@@ -33,7 +40,7 @@ const AmiibosGrid = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    setSearchTerm(searchInput) // Atualiza o estado searchTerm apenas quando o botão de pesquisa é clicado
+    setSearchTerm(searchInput)
     dispatch(searchAmiibos(searchInput))
   }
 
@@ -46,7 +53,7 @@ const AmiibosGrid = () => {
     ) {
       setPage((prev) => prev + 1)
     }
-  }, [amiibos, displayedAmiibos.length, page])
+  }, [amiibos, displayedAmiibos.length])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
@@ -54,11 +61,13 @@ const AmiibosGrid = () => {
   }, [handleScroll])
 
   return (
-    <div className="container">
-      <div className="d-flex justify-content-around mt-5 mb-5 ">
+    <GridTotal className="container">
+      <CabecalhoPerson className="d-flex justify-content-around mt-5 mb-5 ">
         <h3 className="text-center ">Personagens</h3>
         <form onSubmit={handleSearch}>
-          <label className=" me-3 ">Pesquisar</label>
+          <ButtonLupa type="submit">
+            <img src={lupa} alt="imagem de lupa de pesquisa" />
+          </ButtonLupa>
           <input
             className="text-center"
             type="text"
@@ -66,10 +75,9 @@ const AmiibosGrid = () => {
             value={searchInput}
             onChange={handleInputChange}
           />
-          <button type="submit">Pesquisar</button>
         </form>
-      </div>
-      <ContaienrAmiiboG>
+      </CabecalhoPerson>
+      <ContaienrAmiiboG className="p-0">
         {displayedAmiibos.map((amiibo, index) => (
           <AmiiboItem key={index}>
             <p>{amiibo.name}</p>
@@ -78,7 +86,7 @@ const AmiibosGrid = () => {
         ))}
         {isFetching && <p>Loading...</p>}
       </ContaienrAmiiboG>
-    </div>
+    </GridTotal>
   )
 }
 
