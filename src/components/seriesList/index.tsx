@@ -8,10 +8,10 @@ const seriesObj = {
   '0x35c': 'Shovel Knight',
   '0x018': 'Animal Crossing',
   '0x210': 'Fire Emblem',
+  '0x05c': 'Metroid',
   '0x1f0': 'Kirby',
   '0x350': 'Monster Hunter',
-  '0x080': 'Splatoon',
-  '0x05c': 'Metroid'
+  '0x080': 'Splatoon'
 }
 
 const SeriesList = () => {

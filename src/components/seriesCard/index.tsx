@@ -21,9 +21,9 @@ const seriesImages: { [key: string]: string } = {
   'Animal Crossing': Animal,
   Metroid: Metroid,
   Splatoon: Splatoon,
+  'Fire Emblem': FireEmblend,
   'Monster Hunter': MonsterHunter,
   Kirby: Kirby,
-  'Fire Emblem': FireEmblend,
   Figure: Figura,
   Card: Card,
   Yarn: Yarn

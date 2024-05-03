@@ -10,9 +10,11 @@ const seriesNames: { [key: string]: string } = {
   '0x000': 'Super Mario',
   '0x010': 'The Lengend of Zelda',
   '0x018': 'Animal Crossing',
+  '0x35c': 'Shovel Knight',
   '0x210': 'Fire Emblem',
   '0x350': 'Monster Hunter',
   '0x080': 'Splatoon',
+  '0x1f0': 'Kirby',
   '0x05c': 'Metroid'
 }
 
