@@ -65,13 +65,15 @@ export const Modal = styled.div`
 `
 export const ConteudoOver = styled.div`
   background-color: white;
-  width: 1020px;
+  margin-top: 92px;
+  width: 944px;
   padding: 38px;
   display: flex;
   z-index: 4;
+  border-radius: 16px;
   img {
     margin-right: 42px;
-    height: 700px;
+    height: 570px;
     width: 400px;
   }
 `
@@ -82,9 +84,13 @@ export const OverlayContainer = styled.div`
 export const ImageEspaco = styled.div``
 
 export const OutraCoisa = styled.ul`
+  border-radius: 8px;
   padding: 50px 80px;
   width: 600px;
   // text-align: center;
   background-color: #f1f1f1f1;
+  ul {
+    padding-left: 0;
+  }
 `
 export const showOverlay = styled.div``
