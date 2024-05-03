@@ -49,7 +49,7 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
               {gameSeries && <h4>Game Series: {gameSeries}</h4>}
               {release && (
                 <ul>
-                  <h4 className="mb-2 mt-4">Datas de Lançamentos</h4>
+                  <h4 className="mb-3 mt-4">Datas de Lançamentos</h4>
                   <li>
                     <h5>Austrália</h5> {release.au}
                   </li>

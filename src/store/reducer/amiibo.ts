@@ -36,42 +36,51 @@ const AmiiboSlice = createSlice({
   name: 'amiibo',
   initialState,
   reducers: {
-    startLoading(state) {
-      state.loading = true
-      state.error = null
-    },
-    amiibosLoaded(state, action: PayloadAction<AmiiboType[]>) {
+    amiibosSearched(state, action: PayloadAction<AmiiboType[]>) {
       state.amiibos = action.payload
       state.loading = false
     },
-    amiibosLoadFailure(state, action: PayloadAction<string>) {
-      state.error = action.payload
-      state.loading = false
-    },
-    setPage(state, action: PayloadAction<number>) {
-      state.page = action.payload
-    },
-    incrementPage(state) {
-      state.page += 1
-    },
-    setFilter(
-      state,
-      action: PayloadAction<{
-        field: keyof AmiiboState['filters']
-        value: string
-      }>
-    ) {
-      state.filters[action.payload.field] = action.payload.value
+    searchAmiibos(state, action: PayloadAction<string>) {
+      state.filters.name = action.payload
     }
+    //   startLoading(state) {
+    //     state.loading = true
+    //     state.error = null
+    //   },
+    //   amiibosLoaded(state, action: PayloadAction<AmiiboType[]>) {
+    //     state.amiibos = action.payload
+    //     state.loading = false
+    //   },
+    //   amiibosLoadFailure(state, action: PayloadAction<string>) {
+    //     state.error = action.payload
+    //     state.loading = false
+    //   },
+    //   setPage(state, action: PayloadAction<number>) {
+    //     state.page = action.payload
+    //   },
+    //   incrementPage(state) {
+    //     state.page += 1
+    //   },
+    //   setFilter(
+    //     state,
+    //     action: PayloadAction<{
+    //       field: keyof AmiiboState['filters']
+    //       value: string
+    //     }>
+    //   ) {
+    //     state.filters[action.payload.field] = action.payload.value
+    //   }
   }
 })
 
 export const {
-  startLoading,
-  amiibosLoaded,
-  amiibosLoadFailure,
-  setPage,
-  incrementPage,
-  setFilter
+  amiibosSearched,
+  searchAmiibos
+  // startLoading,
+  // amiibosLoaded,
+  // amiibosLoadFailure,
+  // setPage,
+  // incrementPage,
+  // setFilter
 } = AmiiboSlice.actions
 export default AmiiboSlice.reducer
