@@ -1,26 +1,18 @@
 import { Fcontent } from './styles'
 import { FaInstagram, FaFacebook, FaYoutube } from 'react-icons/fa'
-import IconMario from '../../assets/image/iconMario.png'
 
 const Footer = () => {
   return (
     <Fcontent>
-      <div>
-        <img
-          className="justify-content-center"
-          src={IconMario}
-          alt="Imagem do Mario"
-        />
-      </div>
       <ul className="container d-flex justify-content-around">
         <li>
-          <FaInstagram size={32} />
+          <FaInstagram size={46} />
         </li>
         <li>
-          <FaFacebook size={32} />
+          <FaFacebook size={46} />
         </li>
         <li>
-          <FaYoutube size={32} />
+          <FaYoutube size={46} />
         </li>
       </ul>
       <div>

@@ -2,14 +2,14 @@ import { useSpring, animated } from 'react-spring'
 import { ContentCardSeries } from './style'
 
 import Zelda from '../../assets/image/Zelda.jpg'
-import Pokemon from '../../assets/image/pokemon.jpg'
-import Mario from '../../assets/image/super-mario-bros-movie.webp'
-import AnimalCrossing from '../../assets/image/kirbyfighters2.jpg'
-import YuGiOh from '../../assets/image/Yoshy.jpg'
+import ShovelKing from '../../assets/image/NovaShovel.png'
+import Mario from '../../assets/image/marioOutra.png'
+import Kirby from '../../assets/image/kirbyfighters2.jpg'
 import Splatoon from '../../assets/image/Splatoon.avif'
 import Metroid from '../../assets/image/Metroid.avif'
-import FireEmblend from '../../assets/image/fireEmblem.avif'
-import MonsterHunter from '../../assets/image/Yoshy.jpg'
+import FireEmblend from '../../assets/image/fire4.png'
+import MonsterHunter from '../../assets/image/outroMonster.png'
+import Animal from '../../assets/image/animal3.png'
 import Yarn from '../../assets/image/tipoYarn.jpg'
 import Figura from '../../assets/image/tipoFigura.webp'
 import Card from '../../assets/image/tipoCards.jpg'
@@ -17,12 +17,12 @@ import Card from '../../assets/image/tipoCards.jpg'
 const seriesImages: { [key: string]: string } = {
   'Super Mario': Mario,
   'The Legend of Zelda': Zelda,
-  Pokémon: Pokemon,
-  'Animal Crossing': AnimalCrossing,
+  'Shovel Knight': ShovelKing,
+  'Animal Crossing': Animal,
   Metroid: Metroid,
   Splatoon: Splatoon,
   'Monster Hunter': MonsterHunter,
-  'Yu-Gi-Oh!': YuGiOh,
+  Kirby: Kirby,
   'Fire Emblem': FireEmblend,
   Figure: Figura,
   Card: Card,

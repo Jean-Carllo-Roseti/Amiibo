@@ -5,10 +5,10 @@ import { SeriesContent } from './style'
 const seriesObj = {
   '0x000': 'Super Mario',
   '0x010': 'The Legend of Zelda',
-  '0x35c': 'Pokémon',
+  '0x35c': 'Shovel Knight',
   '0x018': 'Animal Crossing',
   '0x210': 'Fire Emblem',
-  '0x348': 'Yu-Gi-Oh!',
+  '0x1f0': 'Kirby',
   '0x350': 'Monster Hunter',
   '0x080': 'Splatoon',
   '0x05c': 'Metroid'

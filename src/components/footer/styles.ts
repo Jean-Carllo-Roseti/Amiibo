@@ -12,7 +12,10 @@ export const Fcontent = styled.footer`
   }
 
   div {
-    padding: 15px;
+    padding: 32px;
     text-align: center;
+  }
+  ul {
+    padding-top: 16px;
   }
 `
