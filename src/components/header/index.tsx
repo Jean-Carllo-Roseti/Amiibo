@@ -7,8 +7,11 @@ const Header = () => {
     <HContent className="sticky-top">
       <div className="container">
         <HList>
-          <Link to={'/'}>
-            <img className="mario" src={IconMario} alt="Imagem do Mario" />
+          <Link className="d-flex link" to={'/'}>
+            <div className="d-flex align-items-center">
+              <img className="mario" src={IconMario} alt="Imagem do Mario" />
+              <h2 className="link">Home</h2>
+            </div>
           </Link>
           <li>
             <Link className="link" to={'/gameseries'}>

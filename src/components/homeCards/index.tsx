@@ -4,6 +4,7 @@ import {
   CardBody,
   ImageEspaco,
   Botao,
+  // ContentButton,
   Modal,
   ConteudoOver,
   OverlayContainer,
@@ -28,13 +29,10 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
 
   return (
     <>
-      <CardBody>
+      <CardBody onClick={() => setModalOpen(true)}>
         <AmiiboItem>
           <h3>{name}</h3>
           <img src={image} alt={`Foto do personagem ${name}`} />
-          <div>
-            <Botao onClick={() => setModalOpen(true)}>Saiba Mais</Botao>
-          </div>
         </AmiiboItem>
       </CardBody>
       <Modal className={modalOpen ? 'visible' : ''}>

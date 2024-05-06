@@ -2,6 +2,14 @@ import styled from 'styled-components'
 import { AmiiboItem } from '../vitrine/style'
 
 export const CardBody = styled.div`
+  cursor: pointer;
+  border-radius: 8px;
+
+  &:hover {
+    box-shadow: 0 0 16px rgba(144, 238, 0, 1);
+    transition: border-color 2.5s ease;
+  }
+
   ${AmiiboItem} {
     width: 304px;
     margin: 0;
@@ -32,6 +40,7 @@ export const Botao = styled.button`
   border: none;
   border-radius: 6px;
   margin: 8px 0;
+  width: auto;
 
   :hover {
     background-color: rgba(255, 0, 0, 0.5); // Cor vermelha com 50% de opacidade

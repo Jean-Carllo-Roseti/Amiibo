@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 export const DestaqueContent = styled.section`
-  background-color: #f4f4f4;
+  background-color: #cdcdd8;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
   padding: 10px 0;
+  border-radius: 8px;
 
   :nth-child(2) {
     margin-left: 0;

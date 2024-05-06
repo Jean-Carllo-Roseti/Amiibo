@@ -3,7 +3,41 @@ import styled from 'styled-components'
 export const AmiiboList = styled.ul`
   margin-top: 16px;
   display: flex;
-  height: 260px; // Correção feita aqui
+  height: 260px;
+  background-color: #cdcdd8;
+  padding: 12px;
+  border-radius: 8px;
+`
+
+export const AmiiboItem = styled.li`
+  width: 185px;
+  margin-right: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .link {
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: 180px;
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 16px;
+    color: #333;
+  }
+
+  p {
+    font-size: 14px;
+    color: #666;
+  }
 `
 
 export const VitrineSec = styled.section`
@@ -18,33 +52,12 @@ export const VitrineSec = styled.section`
   }
   -ms-overflow-style: none; // Assegura que a barra de rolagem não apareça em browsers como IE e Firefox
   scrollbar-width: none; // Assegura que a barra de rolagem não apareça em browsers Firefox
-`
 
-export const AmiiboItem = styled.li`
-  width: 185px;
-  margin-right: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
-  img {
-    width: 100%;
-    height: 200px;
-    display: block;
-    margin-bottom: 10px;
-  }
-
-  h3 {
-    font-size: 16px;
-    color: #333;
-    text-decorate: none;
-  }
-
-  p {
-    font-size: 14px;
-    color: #666;
+  ${AmiiboItem} {
+    &:hover {
+      border: solid 4px green;
+      transition: border-color 0.9s ease;
+    }
   }
 `
 

@@ -16,8 +16,9 @@ const Footer = () => {
         </li>
       </ul>
       <div>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta
-        incidunt nesciunt veniam vitae repellendus illum?
+        Aviso importante: Este site foi criado para fins de pesquisa de Amiibos.
+        <br />
+        Não oferecemos serviços de comércio eletrônico ou venda de produtos.
       </div>
     </Fcontent>
   )

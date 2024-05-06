@@ -57,6 +57,14 @@ const Vitrine = () => {
     (data as unknown as ApiAmiiboResponse).amiibo
   ).slice(0, 15)
 
+  const limitaName = (name: string) => {
+    if (name.length > 16) {
+      return name.substring(0, 14)
+    }
+
+    return name
+  }
+
   return (
     <>
       <h2 className="text-center mt-5 mb-5">Confira Mais</h2>
@@ -69,10 +77,11 @@ const Vitrine = () => {
             {amiibos.map((amiibo) => (
               <AmiiboItem key={amiibo.tail}>
                 <Link
+                  className="link"
                   to={`/game-series/${encodeURIComponent(amiibo.amiiboSeries)}`}
                   key={amiibo.amiiboSeries}
                 >
-                  <h3 className="text-center">{amiibo.name}</h3>
+                  <h3 className="text-center">{limitaName(amiibo.name)}</h3>
                   <img src={amiibo.image} alt={amiibo.name} />
                 </Link>
               </AmiiboItem>
