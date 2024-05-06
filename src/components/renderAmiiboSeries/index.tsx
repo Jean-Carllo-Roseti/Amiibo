@@ -36,7 +36,7 @@ const RenderAmiiboSeries = () => {
     }
   }
 
-  // Manage displayed amiibos based on pagination
+  // organiza o display de  amiibos baseada na paginação
   useEffect(() => {
     if (amiibos) {
       console.log('total amiibos fetch:', amiibos.length)
@@ -51,7 +51,7 @@ const RenderAmiiboSeries = () => {
       amiibos &&
       displayedAmiibos.length < amiibos.length
     ) {
-      setPage((prev) => prev + 1) // Load next "page" of amiibos
+      setPage((prev) => prev + 1) // carrega a próxima  "page" de amiibos
     }
   }, [amiibos, displayedAmiibos.length, page]) // Assegure-se de que todas as dependências externas estão listadas aqui
 

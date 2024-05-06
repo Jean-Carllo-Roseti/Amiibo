@@ -14,7 +14,7 @@ import { ImageCar } from './styel'
 
 const Carrossel = () => {
   return (
-    <Carousel interval={1500} fade>
+    <Carousel className="" interval={1500} fade>
       <Carousel.Item>
         <ImageCar
           className="limite d-block w-100 "

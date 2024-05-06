@@ -19,12 +19,12 @@ const AmiiboApi = createApi({
     }),
     getAmiibos: builder.query({
       query: () => `amiibo/`,
-      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo
     }),
     getAmiibosByGames: builder.query({
       query: (gameSeriesKey) =>
         `amiibo/?gameseries=${encodeURIComponent(gameSeriesKey)}`,
-      transformResponse: (response: ApiAmiiboResponse) => response.amiibo // Garante que a transformação está correta
+      transformResponse: (response: ApiAmiiboResponse) => response.amiibo
     }),
     getAmiibosByType: builder.query({
       query: (typesKey) => `amiibo/?type=${encodeURIComponent(typesKey)}`,

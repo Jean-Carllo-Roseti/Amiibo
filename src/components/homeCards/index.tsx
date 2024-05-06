@@ -3,8 +3,6 @@ import { AmiiboItem } from '../vitrine/style'
 import {
   CardBody,
   ImageEspaco,
-  Botao,
-  // ContentButton,
   Modal,
   ConteudoOver,
   OverlayContainer,
@@ -49,16 +47,16 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
                 <ul>
                   <h4 className="mb-3 mt-4">Datas de Lançamentos</h4>
                   <li>
-                    <h5>Austrália</h5> {release.au}
+                    <h5>Austrália</h5> <p>{release.au}</p>
                   </li>
                   <li>
-                    <h5>EUA</h5> {release.eu}
+                    <h5>EUA</h5> <p>{release.eu}</p>
                   </li>
                   <li>
-                    <h5>Japão</h5> {release.jp}
+                    <h5>Japão</h5> <p>{release.jp}</p>
                   </li>
                   <li>
-                    <h5>América do Norte</h5> {release.na}
+                    <h5>América do Norte</h5> <p>{release.na}</p>
                   </li>
                 </ul>
               )}

@@ -11,6 +11,16 @@ export const DestaqueContent = styled.section`
   :nth-child(2) {
     margin-left: 0;
     margin-right: 0;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      padding: 4px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    display: block;
   }
 
   .container {
@@ -18,4 +28,3 @@ export const DestaqueContent = styled.section`
     margin-bottom: 24px;
   }
 `
-export const Modal = styled.div``

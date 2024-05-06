@@ -13,12 +13,23 @@ export const CardBody = styled.div`
   ${AmiiboItem} {
     width: 304px;
     margin: 0;
+
+    @media (max-width: 768px) {
+      margin: 0 auto;
+      margin-bottom: 16px;
+    }
   }
 
   img {
     width: 283px;
     height: 390px;
     border-radius: 16px;
+
+    @media (max-width: 768px) {
+      width: 70%;
+      height: 80%;
+      border-radius: 16px;
+    }
   }
 
   h3,
@@ -34,18 +45,6 @@ export const CardBody = styled.div`
   }
 `
 
-export const Botao = styled.button`
-  background-color: rgba(255, 0, 0);
-  padding: 4px 6px;
-  border: none;
-  border-radius: 6px;
-  margin: 8px 0;
-  width: auto;
-
-  :hover {
-    background-color: rgba(255, 0, 0, 0.5); // Cor vermelha com 50% de opacidade
-  }
-`
 export const Modal = styled.div`
   position: fixed;
   top: 0;
@@ -80,10 +79,25 @@ export const ConteudoOver = styled.div`
   display: flex;
   z-index: 4;
   border-radius: 16px;
+
   img {
     margin-right: 42px;
     height: 570px;
     width: 400px;
+
+    @media (max-width: 768px) {
+      width: 94%;
+      height: 98%;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    padding: 16px;
+    margin-top: 100px;
   }
 `
 
@@ -96,10 +110,19 @@ export const OutraCoisa = styled.ul`
   border-radius: 8px;
   padding: 50px 80px;
   width: 600px;
-  // text-align: center;
   background-color: #f1f1f1f1;
+
   ul {
     padding-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+
+    h4,
+    h5 {
+      font-size: 12px;
+    }
   }
 `
 export const showOverlay = styled.div``
