@@ -55,7 +55,7 @@ export const VitrineSec = styled.section`
 
   ${AmiiboItem} {
     &:hover {
-      border: solid 4px green;
+      border: solid 4px rgba(144, 238, 0, 1);
       transition: border-color 0.9s ease;
     }
   }
