@@ -86,14 +86,15 @@ export const ConteudoOver = styled.div`
     width: 400px;
 
     @media (max-width: 768px) {
-      width: 94%;
-      height: 98%;
+      width: 180px;
+      height: 388px;
       margin: 0 auto;
+      margin-right: 12px;
     }
   }
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 100%;
     height: 70%;
     margin: auto;
     padding: 16px;
@@ -108,16 +109,16 @@ export const ImageEspaco = styled.div``
 
 export const OutraCoisa = styled.ul`
   border-radius: 8px;
-  padding: 50px 80px;
+  padding: 16px 80px;
   width: 600px;
   background-color: #f1f1f1f1;
 
-  ul {
-    padding-left: 0;
-  }
-
   @media (max-width: 768px) {
     width: 60%;
+
+    h4 {
+      padding-left: 6px;
+    }
 
     h4,
     h5 {
@@ -126,3 +127,7 @@ export const OutraCoisa = styled.ul`
   }
 `
 export const showOverlay = styled.div``
+
+export const AmiibosInform = styled.ul`
+  padding-left: 16px;
+`

@@ -14,7 +14,7 @@ export const DestaqueContent = styled.section`
 
     @media (max-width: 768px) {
       margin: 0 auto;
-      padding: 4px 0;
+      padding: 0;
     }
   }
 

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { AmiiboItem } from '../vitrine/style'
 import {
   CardBody,
+  AmiibosInform,
   ImageEspaco,
   Modal,
   ConteudoOver,
@@ -44,7 +45,7 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
               {amiiboSeries && <h4>Amiibo Series: {amiiboSeries}</h4>}
               {gameSeries && <h4>Game Series: {gameSeries}</h4>}
               {release && (
-                <ul>
+                <AmiibosInform>
                   <h4 className="mb-3 mt-4">Datas de Lançamentos</h4>
                   <li>
                     <h5>Austrália</h5> <p>{release.au}</p>
@@ -58,7 +59,7 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
                   <li>
                     <h5>América do Norte</h5> <p>{release.na}</p>
                   </li>
-                </ul>
+                </AmiibosInform>
               )}
             </OutraCoisa>
           </ConteudoOver>

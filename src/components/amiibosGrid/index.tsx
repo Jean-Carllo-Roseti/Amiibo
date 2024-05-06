@@ -62,7 +62,7 @@ const AmiibosGrid = () => {
 
   return (
     <GridTotal className="container">
-      <CabecalhoPerson className="d-flex justify-content-around mt-5 mb-5 ">
+      <CabecalhoPerson className=" mt-5 mb-5 ">
         <h3 className="text-center ">Personagens</h3>
         <form onSubmit={handleSearch}>
           <ButtonLupa type="submit">
