@@ -41,12 +41,12 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
               <img src={image} alt={`Foto do personagem ${name}`} />
             </ImageEspaco>
             <OutraCoisa>
-              <h2 className="text-center mb-4">{name}</h2>
+              <h2 className="text-center ">{name}</h2>
               {amiiboSeries && <h4>Amiibo Series: {amiiboSeries}</h4>}
               {gameSeries && <h4>Game Series: {gameSeries}</h4>}
               {release && (
                 <AmiibosInform>
-                  <h4 className="mb-3 mt-4">Datas de Lançamentos</h4>
+                  <h4 className="mb-1 mt-2">Datas de Lançamentos</h4>
                   <li>
                     <h5>Austrália</h5> <p>{release.au}</p>
                   </li>

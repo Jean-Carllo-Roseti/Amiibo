@@ -29,6 +29,7 @@ export const CardBody = styled.div`
       width: 70%;
       height: 80%;
       border-radius: 16px;
+      margin: 0 auto;
     }
   }
 
@@ -80,6 +81,14 @@ export const ConteudoOver = styled.div`
   z-index: 4;
   border-radius: 16px;
 
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 448px;
+    margin: auto;
+    padding: 16px;
+    margin-top: 116px;
+  }
+
   img {
     margin-right: 42px;
     height: 570px;
@@ -91,14 +100,6 @@ export const ConteudoOver = styled.div`
       margin: 0 auto;
       margin-right: 12px;
     }
-  }
-
-  @media (max-width: 768px) {
-    width: 100%;
-    height: 70%;
-    margin: auto;
-    padding: 16px;
-    margin-top: 100px;
   }
 `
 
@@ -114,11 +115,9 @@ export const OutraCoisa = styled.ul`
   background-color: #f1f1f1f1;
 
   @media (max-width: 768px) {
-    width: 60%;
-
-    h4 {
-      padding-left: 6px;
-    }
+    width: 200px;
+    padding: 16px 20px;
+    margin-bottom: 0;
 
     h4,
     h5 {

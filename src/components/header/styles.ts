@@ -82,11 +82,15 @@ export const Hitem = styled.li`
 `
 export const HamLink = styled.div`
   display: none;
-  transition: height 1s ease;
-  height: 124px;
 
   &.is-open {
     display: block;
-    height: 124px;
+  }
+`
+export const Testando = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
   }
 `
