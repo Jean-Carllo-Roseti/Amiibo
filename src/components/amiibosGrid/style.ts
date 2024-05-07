@@ -68,4 +68,16 @@ export const CabecalhoPerson = styled.div`
   @media (max-width: 768px) {
     justify-content: center;
   }
+
+  @media (max-width: 576px) {
+    display: block;
+
+    form {
+      text-align: center;
+
+      button {
+        margin-left: 0;
+      }
+    }
+  }
 `
