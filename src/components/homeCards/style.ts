@@ -97,16 +97,12 @@ export const ConteudoOver = styled.div`
     }
   }
 
-  @media (max-width: 576px) {
-    display: flex;
-  }
-
   img {
     margin-right: 18px;
     height: 428px;
     width: 328px;
 
-    @media (max-width: 356px) {
+    @media (max-width: 576px) {
       display: none;
     }
 
