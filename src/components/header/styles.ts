@@ -21,7 +21,7 @@ export const HList = styled.ul`
   margin-bottom: 0;
 
   @media (max-width: 768px) {
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   img {
@@ -62,7 +62,7 @@ export const HList = styled.ul`
 export const Hamburguer = styled.div`
   width: 32px;
   margin-bottom: 8px;
-
+  cursor: pointer;
   span {
     height: 2px;
     display: block;
@@ -82,10 +82,11 @@ export const Hitem = styled.li`
 `
 export const HamLink = styled.div`
   display: none;
-  transition: height 0.3s ease;
+  transition: height 1s ease;
+  height: 124px;
 
   &.is-open {
     display: block;
-    height: 120px;
+    height: 124px;
   }
 `
