@@ -25,6 +25,10 @@ export const HList = styled.ul`
     margin: 0 100px;
   }
 
+  @media (max-width: 576px) {
+    margin: 0;
+  }
+
   img {
     width: 84px;
   }
