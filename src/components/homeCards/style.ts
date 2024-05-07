@@ -106,14 +106,15 @@ export const ConteudoOver = styled.div`
     height: 428px;
     width: 328px;
 
+    @media (max-width: 356px) {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       width: 180px;
       height: 388px;
       margin: 0 auto;
       margin-right: 12px;
-    }
-    @media (max-width: 355px:) {
-      display: none;
     }
   }
 `
