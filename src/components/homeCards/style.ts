@@ -88,6 +88,17 @@ export const ConteudoOver = styled.div`
     margin: auto;
     padding: 16px;
     margin-top: 116px;
+    position: relative;
+
+    button {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    display: flex;
   }
 
   img {
@@ -100,6 +111,9 @@ export const ConteudoOver = styled.div`
       height: 388px;
       margin: 0 auto;
       margin-right: 12px;
+    }
+    @media (max-width: 355px:) {
+      display: none;
     }
   }
 `
@@ -120,9 +134,9 @@ export const OutraCoisa = styled.ul`
     padding: 16px 20px;
     margin-bottom: 0;
 
-    h4,
-    h5 {
-      font-size: 12px;
+    p {
+      font-size: 18px;
+      margin-bottom: 4px;
     }
   }
 `
@@ -130,4 +144,13 @@ export const showOverlay = styled.div``
 
 export const AmiibosInform = styled.ul`
   padding-left: 16px;
+
+  @media (max-width: 768px) {
+    li {
+      p {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+    }
+  }
 `
