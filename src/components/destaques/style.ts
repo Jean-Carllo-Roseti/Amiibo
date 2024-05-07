@@ -19,7 +19,7 @@ export const DestaqueContent = styled.section`
   }
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 340px;
     display: block;
   }
 

@@ -40,6 +40,13 @@ export { AmiiboItem }
 
 export const GridTotal = styled.div`
   background-color: #f1f1f1;
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 768px;
+      width: 100%;
+    }
+  }
 `
 export const ButtonLupa = styled.button`
   border: none;
@@ -50,7 +57,7 @@ export const ButtonLupa = styled.button`
   }
 
   @media (max-width: 768px) {
-    margin-left: 60px;
+    margin-left: 30px;
   }
 `
 export const CabecalhoPerson = styled.div`
@@ -59,6 +66,6 @@ export const CabecalhoPerson = styled.div`
   justify-content: space-around;
 
   @media (max-width: 768px) {
-    justify-content: flex-start;
+    justify-content: center;
   }
 `
