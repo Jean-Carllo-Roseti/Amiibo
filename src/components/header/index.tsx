@@ -1,5 +1,12 @@
 import { Link } from 'react-router-dom'
-import { HContent, HList, Hitem, Hamburguer, HamLink, Testando } from './styles'
+import {
+  HContent,
+  HList,
+  Hitem,
+  Hamburguer,
+  HamLink,
+  TotalHamburguer
+} from './styles'
 import IconMario from '../../assets/image/iconMario.png'
 import { useState } from 'react'
 
@@ -10,7 +17,7 @@ const Header = () => {
     <HContent className="sticky-top">
       <div className="container">
         <HList>
-          <Testando>
+          <TotalHamburguer>
             <Hamburguer onClick={() => setIsMenuOpen(!isMenuOpen)}>
               <span />
               <span />
@@ -35,7 +42,7 @@ const Header = () => {
                 </li>
               </ul>
             </HamLink>
-          </Testando>
+          </TotalHamburguer>
           <Link className=" link" to={'/'}>
             <img className="mario" src={IconMario} alt="Imagem do Mario" />
           </Link>

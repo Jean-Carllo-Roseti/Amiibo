@@ -37,27 +37,33 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
       <Modal className={modalOpen ? 'visible' : ''}>
         <OverlayContainer>
           <ConteudoOver>
+            <button
+              onClick={() => setModalOpen(false)}
+              type="button"
+              className="btn-close"
+              aria-label="Close"
+            ></button>
             <ImageEspaco>
               <img src={image} alt={`Foto do personagem ${name}`} />
             </ImageEspaco>
             <OutraCoisa>
               <h2 className="text-center ">{name}</h2>
-              {amiiboSeries && <h4>Amiibo Series: {amiiboSeries}</h4>}
-              {gameSeries && <h4>Game Series: {gameSeries}</h4>}
+              {amiiboSeries && <p>Amiibo Series: {amiiboSeries}</p>}
+              {gameSeries && <p>Game Series: {gameSeries}</p>}
               {release && (
                 <AmiibosInform>
-                  <h4 className="mb-1 mt-2">Datas de Lançamentos</h4>
+                  <p>Datas de Lançamentos</p>
                   <li>
-                    <h5>Austrália</h5> <p>{release.au}</p>
+                    <p>Austrália {release.au}</p>
                   </li>
                   <li>
-                    <h5>EUA</h5> <p>{release.eu}</p>
+                    <p>EUA {release.eu}</p>
                   </li>
                   <li>
-                    <h5>Japão</h5> <p>{release.jp}</p>
+                    <p>Japão {release.jp}</p>
                   </li>
                   <li>
-                    <h5>América do Norte</h5> <p>{release.na}</p>
+                    <p>América do Norte {release.na}</p>
                   </li>
                 </AmiibosInform>
               )}

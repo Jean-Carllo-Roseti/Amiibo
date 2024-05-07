@@ -75,8 +75,9 @@ export const Modal = styled.div`
 export const ConteudoOver = styled.div`
   background-color: white;
   margin-top: 92px;
-  width: 944px;
-  padding: 38px;
+  width: 742px;
+  height: 480px;
+  padding: 16px;
   display: flex;
   z-index: 4;
   border-radius: 16px;
@@ -90,9 +91,9 @@ export const ConteudoOver = styled.div`
   }
 
   img {
-    margin-right: 42px;
-    height: 570px;
-    width: 400px;
+    margin-right: 18px;
+    height: 428px;
+    width: 328px;
 
     @media (max-width: 768px) {
       width: 180px;

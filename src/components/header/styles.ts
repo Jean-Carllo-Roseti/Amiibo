@@ -22,6 +22,7 @@ export const HList = styled.ul`
 
   @media (max-width: 768px) {
     justify-content: space-between;
+    margin: 0 100px;
   }
 
   img {
@@ -87,7 +88,7 @@ export const HamLink = styled.div`
     display: block;
   }
 `
-export const Testando = styled.div`
+export const TotalHamburguer = styled.div`
   display: none;
 
   @media (max-width: 768px) {
