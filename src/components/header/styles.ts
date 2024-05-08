@@ -7,9 +7,7 @@ export const HContent = styled.header`
   padding-bottom: 14px;
 
   .mario:hover {
-    transform: translateY(
-      -10px
-    ); /* Adicionando a transformação no hover da classe mario */
+    transform: translateY(-10px);
   }
 `
 
@@ -86,10 +84,16 @@ export const Hitem = styled.li`
   }
 `
 export const HamLink = styled.div`
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 1s ease-in-out;
 
   &.is-open {
-    display: block;
+    max-height: 126px;
+  }
+
+  .preencher {
+    padding-right: 76px;
   }
 `
 export const TotalHamburguer = styled.div`

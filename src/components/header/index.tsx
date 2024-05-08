@@ -27,7 +27,7 @@ const Header = () => {
               <ul className="p-0">
                 <li>
                   <Link className=" link " to={'/gameseries'}>
-                    <h2>Séries</h2>
+                    <h2 className="preencher">Séries</h2>
                   </Link>
                 </li>
                 <li>
@@ -37,7 +37,7 @@ const Header = () => {
                 </li>
                 <li>
                   <Link className=" link " to={'/type'}>
-                    <h2>Tipos</h2>
+                    <h2 className="preencher">Tipos</h2>
                   </Link>
                 </li>
               </ul>
