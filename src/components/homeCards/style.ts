@@ -99,7 +99,7 @@ export const ConteudoOver = styled.div`
 
   @media (max-width: 576px) {
     width: 200px;
-    height: 330px;
+    height: 352px;
     margin-top: 126px;
   }
 
@@ -150,7 +150,7 @@ export const OutraCoisa = styled.ul`
   }
 
   @media (max-width: 576px) {
-    height: 306px;
+    height: 324px;
     p {
       padding-left: 6px;
       font-size: 14px;
