@@ -79,7 +79,7 @@ export const ConteudoOver = styled.div`
   height: 480px;
   padding: 16px;
   display: flex;
-  z-index: 4;
+  z-index: 8;
   border-radius: 16px;
 
   @media (max-width: 768px) {
@@ -95,6 +95,12 @@ export const ConteudoOver = styled.div`
       top: 6px;
       left: 6px;
     }
+  }
+
+  @media (max-width: 576px) {
+    width: 200px;
+    height: 330px;
+    margin-top: 126px;
   }
 
   img {
@@ -126,14 +132,29 @@ export const OutraCoisa = styled.ul`
   width: 600px;
   background-color: #f1f1f1f1;
 
+  h2 {
+    font-size: 18px;
+    margin: 0;
+  }
+
   @media (max-width: 768px) {
     width: 200px;
-    padding: 16px 20px;
+    padding: 8px 2px;
     margin-bottom: 0;
 
     p {
+      padding-left: 8px;
       font-size: 18px;
       margin-bottom: 4px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    height: 306px;
+    p {
+      padding-left: 6px;
+      font-size: 14px;
+      margin: 0;
     }
   }
 `
@@ -142,11 +163,30 @@ export const showOverlay = styled.div``
 export const AmiibosInform = styled.ul`
   padding-left: 16px;
 
+  P {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
   @media (max-width: 768px) {
     li {
       p {
+        padding-left: 12px;
         font-size: 14px;
         margin-bottom: 8px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .ajuste {
+      padding-left: 0;
+      margin: 0;
+    }
+    li {
+      p {
+        padding-left: 0;
+        font-size: 14px;
+        margin-bottom: 2px;
       }
     }
   }

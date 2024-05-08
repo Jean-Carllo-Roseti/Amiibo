@@ -52,18 +52,30 @@ const Cards = ({ name, image, amiiboSeries, gameSeries, release }: Props) => {
               {gameSeries && <p>Game Series: {gameSeries}</p>}
               {release && (
                 <AmiibosInform>
-                  <p>Datas de Lançamentos</p>
+                  <p className="ajuste">Datas de Lançamentos</p>
                   <li>
-                    <p>Austrália {release.au}</p>
+                    <p>
+                      Austrália
+                      <br /> {release.au}
+                    </p>
                   </li>
                   <li>
-                    <p>EUA {release.eu}</p>
+                    <p>
+                      EUA
+                      <br /> {release.eu}
+                    </p>
                   </li>
                   <li>
-                    <p>Japão {release.jp}</p>
+                    <p>
+                      Japão
+                      <br /> {release.jp}
+                    </p>
                   </li>
                   <li>
-                    <p>América do Norte {release.na}</p>
+                    <p>
+                      América do Norte
+                      <br /> {release.na}
+                    </p>
                   </li>
                 </AmiibosInform>
               )}
