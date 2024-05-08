@@ -21,18 +21,18 @@ type AmiiboInfo = {
 const amiiboList: AmiiboInfo[] = [
   { head: '08000100', tail: '003e0402', name: 'Inkling Girl' },
   { head: '08000200', tail: '003f0402', name: 'Inkling Boy' },
-  // { head: '08050200', tail: '041b0402', name: 'Octoling' }
-  // { head: '01830000', tail: '02420502', name: 'Tom Nook' },
-  // { head: '01810000', tail: '024b0502', name: 'Isabelle' },
-  // { head: '08060100', tail: '041c0402', name: 'Smallfry' },
-  // { head: '07420000', tail: '001f0002', name: 'Palutena' },
-  // { head: '3f000000', tail: '042e0002', name: 'Sora' },
-  { head: '07820000', tail: '002f0002', name: 'Duck Hunt' }
-  // { head: '01000000', tail: '03530902', name: 'Link' },
-  // { head: '01010000', tail: '03560902', name: 'Zelda' },
-  // { head: '00000000', tail: '00340102', name: 'Mario' },
-  // { head: '00010000', tail: '00350102', name: 'Luigi' },
-  // { head: '00030000', tail: '00020002', name: 'Yoshi' }
+  { head: '08050200', tail: '041b0402', name: 'Octoling' },
+  { head: '01830000', tail: '02420502', name: 'Tom Nook' },
+  { head: '01810000', tail: '024b0502', name: 'Isabelle' },
+  { head: '08060100', tail: '041c0402', name: 'Smallfry' },
+  { head: '07420000', tail: '001f0002', name: 'Palutena' },
+  { head: '3f000000', tail: '042e0002', name: 'Sora' },
+  { head: '07820000', tail: '002f0002', name: 'Duck Hunt' },
+  { head: '01000000', tail: '03530902', name: 'Link' },
+  { head: '01010000', tail: '03560902', name: 'Zelda' },
+  { head: '00000000', tail: '00340102', name: 'Mario' },
+  { head: '00010000', tail: '00350102', name: 'Luigi' },
+  { head: '00030000', tail: '00020002', name: 'Yoshi' }
 ]
 
 const selectRandomAmiibos = (): AmiiboInfo[] => {
