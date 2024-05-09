@@ -10,8 +10,8 @@ import Metroid from '../../assets/image/Metroid.avif'
 import FireEmblend from '../../assets/image/fire4.png'
 import MonsterHunter from '../../assets/image/tentarMonster.jpg'
 import Animal from '../../assets/image/animal3.png'
-import Yarn from '../../assets/image/tipoYarn.jpg'
-import Figura from '../../assets/image/tipoFigura.webp'
+import Yarn from '../../assets/image/YarnType.jpg'
+import Figura from '../../assets/image/FigureType2.jpg'
 import Card from '../../assets/image/tipoCards.jpg'
 
 const seriesImages: { [key: string]: string } = {
