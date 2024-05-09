@@ -17,6 +17,7 @@ export const ContentCardSeries = styled.div`
   animation: ${fadeIn} 1s ease-out;
   cursor: pointer;
   box-shadow: 18px -17px 5px 1px rgba(0, 0, 0, 0.1);
+
   &:hover {
     box-shadow: 18px -17px 5px 1px rgba(0, 0, 0, 0.8);
     transform: scale(1.05);
@@ -24,4 +25,9 @@ export const ContentCardSeries = styled.div`
       box-shadow 0.7s ease,
       transform 0.7s ease;
   }
+`
+export const seriesImages = styled.img`
+  width: 984px;
+  height: 192px;
+  object-fit: fill;
 `
