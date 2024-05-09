@@ -26,8 +26,3 @@ export const ContentCardSeries = styled.div`
       transform 0.7s ease;
   }
 `
-export const seriesImages = styled.img`
-  width: 984px;
-  height: 192px;
-  object-fit: fill;
-`
